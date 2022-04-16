@@ -17,23 +17,157 @@
     </header>
     <main>
         <nav>
-            <a href="#table"><div class="menu">테이블 요소</div></a>
-            <a href="#form"><div class="menu">폼 요소</div></a>
-            <a href="#list"><div class="menu">리스트 요소</div></a>
+            <a href="#table">
+                <div class="menu">테이블 요소</div>
+            </a>
+            <a href="#form">
+                <div class="menu">폼 요소</div>
+            </a>
+            <a href="#list">
+                <div class="menu">리스트 요소</div>
+            </a>
         </nav>
         <article>
             <h2>구성 요소</h2>
+            <!-- 테이블 요소 -->
             <article class="contents">
                 <h3 id="table">테이블 요소</h3>
-                <p>콘텐츠 영역</p>
+                <div>
+                    <table class="sizeTable">
+                        <caption>아동 사이즈</caption>
+                        <colgroup>
+                            <col class="double">
+                            <col span="7" class="single">
+                            <col class="double">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th colspan="2" scope="col">구분</th>
+                                <th colspan="2" scope="col">Small</th>
+                                <th colspan="2" scope="col">Medium</th>
+                                <th colspan="2" scope="col">Large</th>
+                                <th>X-Large</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="3" scope="rowgroup">미국 남아<br>[Boys 2-7]</th>
+                                <th scope="row">사이즈</th>
+                                <td>2T</td>
+                                <td>3T</td>
+                                <td>4T</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">키</th>
+                                <td>84-91</td>
+                                <td>91-99</td>
+                                <td>91-99</td>
+                                <td>99-107</td>
+                                <td>107-114</td>
+                                <td>114-122</td>
+                                <td>122-130</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">몸무게</th>
+                                <td>13-15</td>
+                                <td>14-15</td>
+                                <td>13-15</td>
+                                <td>14-15</td>
+                                <td>19-21</td>
+                                <td>20-23</td>
+                                <td>23-25</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="3" scope="rowgroup">미국 여아<br>[Girls 2-6X]</th>
+                                <th scope="row">사이즈</th>
+                                <td>2T</td>
+                                <td>3T</td>
+                                <td>4T</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>6X</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">키</th>
+                                <td>84-91</td>
+                                <td>91-99</td>
+                                <td>91-99</td>
+                                <td>99-107</td>
+                                <td>107-114</td>
+                                <td>114-122</td>
+                                <td>122-130</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">몸무게</th>
+                                <td>13-15</td>
+                                <td>14-15</td>
+                                <td>13-15</td>
+                                <td>14-15</td>
+                                <td>19-21</td>
+                                <td>20-23</td>
+                                <td>23-25</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="refundTable">
+                        <caption>환불 가능 금액 조회</caption>
+                        <colgroup>
+                            <col class="double">
+                            <col span="3" class="single">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">구분</th>
+                                <th scope="col">환불가능액</th>
+                                <th scope="col">수수료</th>
+                                <th scope="col">총 환불금액</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">게임 보상금액</th>
+                                <td>100,000원</td>
+                                <td>1,000원</td>
+                                <td>99,000원</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">월정액제 보상금액</th>
+                                <td>10,000원</td>
+                                <td>5,000원</td>
+                                <td>5,000원</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">코인</th>
+                                <td>9,000원</td>
+                                <td>500원</td>
+                                <td>8,500원</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row">총합계</th>
+                                <td>119,000원</td>
+                                <td>6,500원</td>
+                                <td>112,500원</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </article>
+            <!-- 폼 요소 -->
             <article class="contents">
                 <h3 id="form">폼 요소</h3>
-                <p>콘텐츠 영역</p>
+                <div>콘텐츠 영역</div>
             </article>
+            <!-- 리스트 요소 -->
             <article class="contents">
                 <h3 id="list">리스트 요소</h3>
-                <p>콘텐츠 영역</p>
+                <div>콘텐츠 영역</div>
             </article>
         </article>
     </main>

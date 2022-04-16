@@ -2,6 +2,7 @@
 
 body {
     /* Display & Box Model */
+    width: 1920px;
     margin: 0;
     /* Text */
     font-family: '나눔고딕', 'Nanum Gothic', '돋움', Dotum, sans-serif;
@@ -11,7 +12,6 @@ body {
 header {
     /* Display & Box Model */
     height: 120px;
-    padding: 0 420px;
     /* Color */
     background-color: #000;
     color: #fff;
@@ -19,9 +19,8 @@ header {
 
 header h1 {
     /* Display & Box Model */
-    height: 120px;
     padding-left: 40px;
-    margin: 0;
+    margin: 0 420px;
     /* Text */
     font-size: 40px;
     line-height: 120px;
@@ -101,17 +100,108 @@ article h2 {
     line-height: 46px;
 }
 
-.contents p {
+.contents div {
     /* Display & Box Model */
     height: auto;
     padding: 30px;
     border: 1px solid #d1d1d1;
     border-top: none;
     margin: 0;
+    /* Text */
+    font-size: 12px;
+}
+
+.contents table {
+    /* Display & Box Model */
+    border-collapse: collapse;
+}
+
+.sizeTable {
+    /* Display & Box Model */
+    width: 100%;
+    margin-bottom: 45px;
+    /* Color */
+    color: #555;
+}
+
+.sizeTable caption {
+    /* Display & Box Model */
+    margin-bottom: 15px;
     /* Color */
     color: #000;
     /* Text */
-    font-size: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.sizeTable colgroup .single {width: 85px;}
+
+.sizeTable colgroup .double {width: 170px;}
+
+.sizeTable thead {
+    /* Color */
+    background-color: #fbfbfb;
+}
+
+.sizeTable th, .sizeTable td {
+    /* Display & Box Model */
+    height: 35px;
+    border: 1px solid #e4e4e4;
+    /* Text */
+    text-align: center;
+}
+
+.refundTable {
+    /* Display & Box Model */
+    width: 100%;
+    /* Color */
+    color: #555;
+}
+
+.refundTable caption {
+    /* Display & Box Model */
+    margin-bottom: 15px;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.refundTable colgroup .single {width: 187px;}
+
+.refundTable thead {
+    /* Display & Box Model */
+    border-top: 2px solid #a5a5a5;
+    border-bottom: 1px solid #e4e4e4;
+    /* Color */
+    background-color: #fbfbfb;
+}
+
+.refundTable tfoot {
+    /* Display & Box Model */
+    border-top: 1px solid #a5a5a5;
+    border-bottom: 1px solid #e4e4e4;
+    /* Text */
+    font-weight: bold;
+}
+
+.refundTable th {
+    /* Display & Box Model */
+    height: 35px;
+    /* Text */
+    font-weight: normal;
+}
+
+.refundTable tfoot th {font-weight: bold;}
+
+.refundTable td:not([scope]) {
+    /* Display & Box Model */
+    padding-right: 65px;
+    /* Text */
+    text-align: right;
 }
 
 footer {
