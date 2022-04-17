@@ -4,6 +4,7 @@ body {
     /* Display & Box Model */
     width: 1920px;
     margin: 0;
+    overflow-x: hidden;
     /* Text */
     font-family: '나눔고딕', 'Nanum Gothic', '돋움', Dotum, sans-serif;
 
@@ -100,7 +101,7 @@ article h2 {
     line-height: 46px;
 }
 
-.contents div {
+.contents article {
     /* Display & Box Model */
     height: auto;
     padding: 30px;
@@ -111,7 +112,7 @@ article h2 {
     font-size: 12px;
 }
 
-.contents table {
+.tables table {
     /* Display & Box Model */
     border-collapse: collapse;
 }
@@ -202,6 +203,145 @@ article h2 {
     padding-right: 65px;
     /* Text */
     text-align: right;
+}
+
+.signUp {
+    /* Display & Box Model */
+    position: relative;
+    padding: 20px;
+    padding-top: 0;
+    border: 1px solid #e4e4e4;
+    margin-top: 30px;
+    margin-right: 0;
+    margin-left: 0;
+    /* Color */
+    background-color: #fbfbfb;
+}
+
+.signUp legend {
+    /* Display & Box Model */
+    position: absolute;
+    top: -30px;
+    left: 0px;
+    padding: 0;
+    /* Text */
+    font-size: 14px;
+    font-weight: bold;
+    /* Color */
+    color: #000;
+}
+
+.signUp textarea {resize: none;}
+
+/* 가입하기 버튼 */
+.signUp>.submitButton {
+    /* Display & Box Model */
+    cursor: pointer;
+    width: 100%;
+    height: 45px;
+    border: 1px solid #08a600;
+    margin-top: 20px;
+    /* Text */
+    font-size: 16px;
+    /* Color */
+    background-color: #4ec53d;
+    color: #fff;
+}
+
+.labels {
+    /* Display & Box Model */
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* Text */
+    font-size: 14px;
+    font-weight: bold;
+    /* Color */
+    color: #000;
+}
+
+.inputs {
+    /* Display & Box Model */
+    box-sizing: border-box;
+    width: 100%;
+    /* Text */
+    font-size: 12px;
+    /* Color */
+    color: #000;
+}
+
+/* textarea를 제외한 form 요소 */
+.inputs:not([rows]) {
+    /* Display & Box Model */
+    height: 35px;
+    margin-bottom: 5px;
+}
+
+/* radio, checkbox를 제외한 form 요소 */
+.inputs:not([for]) {
+    /* Display & Box Model */
+    border: 1px solid #e4e4e4;
+}
+
+/* 동일한 너비의 컨테이너들로 이루어진 그리드 */
+.evenGrid {
+    /* Display & Box Model */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    column-gap: 13px;
+}
+
+.userGender {
+    /* Display & Box Model */
+    display: inline-block;
+    width: 110px;
+    height: 17px;
+    line-height: 17px;
+}
+
+.userGender input {
+    /* Display & Box Model */
+    margin: 0;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    vertical-align: middle;
+}
+
+/* 다른 너비의 컨테이너들로 이루어진 그리드 */
+.oddGrid {
+    /* Display & Box Model */
+    display: grid;
+    grid-template-columns: auto 150px;
+    column-gap: 13px;
+}
+
+/* 인증번호 받기 버튼 */
+.oddGrid .submitButton {
+    /* Display & Box Model */
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 150px;
+    height: 35px;
+    border: 1px solid #08a600;
+    /* Text */
+    font-size: 12px;
+    /* Color */
+    background-color: #4ec53d;
+    color: #fff;
+}
+
+.userHobby {
+    /* Display & Box Model */
+    height: 17px;
+    line-height: 17px;
+}
+
+.userHobby input {
+    /* Display & Box Model */
+    margin: 0;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    vertical-align: middle;
 }
 
 footer {
