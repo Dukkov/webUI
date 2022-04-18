@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body {
+.body {
     /* Display & Box Model */
     width: 1920px;
     margin: 0;
@@ -10,7 +10,7 @@ body {
 
 }
 
-header {
+.header {
     /* Display & Box Model */
     height: 120px;
     /* Color */
@@ -18,7 +18,7 @@ header {
     color: #fff;
 }
 
-header h1 {
+.header__title {
     /* Display & Box Model */
     padding-left: 40px;
     margin: 0 420px;
@@ -27,7 +27,7 @@ header h1 {
     line-height: 120px;
 }
 
-main {
+.main {
     /* Display & Box Model */
     display: block;
     width: 1080px;
@@ -35,14 +35,14 @@ main {
     margin-bottom: 40px;
 }
 
-nav {
+.nav {
     /* Display & Box Model */
     padding: 0 33px;
     /* Text */
     font-size: 0;
 }
 
-.menu {
+.nav__item {
     /* Display & Box Model */
     display: inline-block;
     width: 322px;
@@ -57,20 +57,20 @@ nav {
     text-align: center;
 }
 
-.menu:hover {
+.nav__item:hover {
     /* Display & Box Model */
     border: 1px solid #454545;
     /* Text */
     font-weight: bold;
 }
 
-article {
+.content {
     /* Display & Box Model */
     padding: 0 40px;
     margin-top: 10px;
 }
 
-article h2 {
+.content__title {
     /* Display & Box Model */
     padding-bottom: 20px;
     border-bottom: 1px solid #454545;
@@ -81,13 +81,13 @@ article h2 {
     font-size: 20px;
 }
 
-.contents {
+.articles {
     /* Display & Box Model */
     padding: 0;
     margin: 30px 0;
 }
 
-.contents h3 {
+.articles__title {
     /* Display & Box Model */
     height: 46px;
     padding-left: 15px;
@@ -101,7 +101,7 @@ article h2 {
     line-height: 46px;
 }
 
-.contents article {
+.articles__container {
     /* Display & Box Model */
     height: auto;
     padding: 30px;
@@ -112,12 +112,20 @@ article h2 {
     font-size: 12px;
 }
 
-.tables table {
+.tables {border-collapse: collapse;}
+
+.tables__caption {
     /* Display & Box Model */
-    border-collapse: collapse;
+    margin-bottom: 15px;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
 }
 
-.sizeTable {
+.size-table {
     /* Display & Box Model */
     width: 100%;
     margin-bottom: 45px;
@@ -125,27 +133,13 @@ article h2 {
     color: #555;
 }
 
-.sizeTable caption {
-    /* Display & Box Model */
-    margin-bottom: 15px;
-    /* Color */
-    color: #000;
-    /* Text */
-    font-size: 14px;
-    font-weight: bold;
-    text-align: left;
-}
+.size-table .col-width {width: 85px;}
 
-.sizeTable colgroup .single {width: 85px;}
+.size-table .col-width--doubled {width: 170px;}
 
-.sizeTable colgroup .double {width: 170px;}
+.size-table__header {background-color: #fbfbfb;}
 
-.sizeTable thead {
-    /* Color */
-    background-color: #fbfbfb;
-}
-
-.sizeTable th, .sizeTable td {
+.size-table__cell{
     /* Display & Box Model */
     height: 35px;
     border: 1px solid #e4e4e4;
@@ -153,27 +147,16 @@ article h2 {
     text-align: center;
 }
 
-.refundTable {
+.refund-table {
     /* Display & Box Model */
     width: 100%;
     /* Color */
     color: #555;
 }
 
-.refundTable caption {
-    /* Display & Box Model */
-    margin-bottom: 15px;
-    /* Color */
-    color: #000;
-    /* Text */
-    font-size: 14px;
-    font-weight: bold;
-    text-align: left;
-}
+.refund-table colgroup .single {width: 187px;}
 
-.refundTable colgroup .single {width: 187px;}
-
-.refundTable thead {
+.refund-table thead {
     /* Display & Box Model */
     border-top: 2px solid #a5a5a5;
     border-bottom: 1px solid #e4e4e4;
@@ -181,7 +164,7 @@ article h2 {
     background-color: #fbfbfb;
 }
 
-.refundTable tfoot {
+.refund-table tfoot {
     /* Display & Box Model */
     border-top: 1px solid #a5a5a5;
     border-bottom: 1px solid #e4e4e4;
@@ -189,16 +172,16 @@ article h2 {
     font-weight: bold;
 }
 
-.refundTable th {
+.refund-table th {
     /* Display & Box Model */
     height: 35px;
     /* Text */
     font-weight: normal;
 }
 
-.refundTable tfoot th {font-weight: bold;}
+.refund-table tfoot th {font-weight: bold;}
 
-.refundTable td:not([scope]) {
+.refund-table td:not([scope]) {
     /* Display & Box Model */
     padding-right: 65px;
     /* Text */
@@ -206,8 +189,9 @@ article h2 {
 }
 
 .signUp {
-    /* Display & Box Model */
+    /* Positioning */
     position: relative;
+    /* Display & Box Model */
     padding: 20px;
     padding-top: 0;
     border: 1px solid #e4e4e4;
@@ -219,16 +203,17 @@ article h2 {
 }
 
 .signUp legend {
-    /* Display & Box Model */
+    /* Positioning */
     position: absolute;
+    /* Display & Box Model */
     top: -30px;
     left: 0px;
     padding: 0;
+    /* Color */
+    color: #000;
     /* Text */
     font-size: 14px;
     font-weight: bold;
-    /* Color */
-    color: #000;
 }
 
 .signUp textarea {resize: none;}
@@ -236,16 +221,17 @@ article h2 {
 /* 가입하기 버튼 */
 .signUp>.submitButton {
     /* Display & Box Model */
-    cursor: pointer;
     width: 100%;
     height: 45px;
     border: 1px solid #08a600;
     margin-top: 20px;
-    /* Text */
-    font-size: 16px;
     /* Color */
     background-color: #4ec53d;
     color: #fff;
+    /* Text */
+    font-size: 16px;
+    /* Other */
+    cursor: pointer;
 }
 
 .labels {
@@ -253,21 +239,22 @@ article h2 {
     display: block;
     margin-top: 20px;
     margin-bottom: 10px;
+    /* Color */
+    color: #000;
     /* Text */
     font-size: 14px;
     font-weight: bold;
-    /* Color */
-    color: #000;
 }
 
 .inputs {
     /* Display & Box Model */
     box-sizing: border-box;
     width: 100%;
-    /* Text */
-    font-size: 12px;
     /* Color */
     color: #000;
+    /* Text */
+    font-size: 12px;
+    font-family: '나눔고딕', 'Nanum Gothic', '돋움', Dotum, sans-serif;
 }
 
 /* textarea를 제외한 form 요소 */
@@ -296,6 +283,7 @@ article h2 {
     display: inline-block;
     width: 110px;
     height: 17px;
+    /* Text */
     line-height: 17px;
 }
 
@@ -319,20 +307,22 @@ article h2 {
 .oddGrid .submitButton {
     /* Display & Box Model */
     box-sizing: border-box;
-    cursor: pointer;
     width: 150px;
     height: 35px;
     border: 1px solid #08a600;
-    /* Text */
-    font-size: 12px;
     /* Color */
     background-color: #4ec53d;
     color: #fff;
+    /* Text */
+    font-size: 12px;
+    /* Other */
+    cursor: pointer;
 }
 
 .userHobby {
     /* Display & Box Model */
     height: 17px;
+    /* Text */
     line-height: 17px;
 }
 
@@ -353,12 +343,6 @@ footer {
     text-align: center;
 }
 
-.info {
-    /* Color */
-    color: #999;
-}
+.info {color: #999;}
 
-.copyright {
-    /* Color */
-    color: #000;
-}
+.copyright {color: #000;}
