@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>portfolio</title>
-    <link rel="stylesheet" href="css/portfolio.css">
     <!-- Nanum Gothic font link from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/portfolio.css">
 </head>
 
 <body class="body">
@@ -17,11 +17,13 @@
     </header>
     <main class="main">
         <nav class="nav">
-            <a href="#table"><div class="nav__item">테이블 요소</div></a>
-            <a href="#form"><div class="nav__item">폼 요소</div></a>
-            <a href="#list"><div class="nav__item">리스트 요소</div></a>
+            <ul>
+                <a href="#table"><li class="nav__item">테이블 요소</li></a>
+                <a href="#form"><li class="nav__item">폼 요소</li></a>
+                <a href="#list"><li class="nav__item">리스트 요소</li></a>
+            </ul>
         </nav>
-        <article class="content">
+        <div class="content">
             <h2 class="content__title">구성 요소</h2>
             <!-- 테이블 요소 -->
             <section class="articles">
@@ -37,17 +39,19 @@
                         </colgroup>
                         <thead class="size-table__header">
                             <tr>
-                                <th colspan="2" scope="col" class="size-table__cell">구분</th>
-                                <th colspan="2" scope="col" class="size-table__cell">Small</th>
-                                <th colspan="2" scope="col" class="size-table__cell">Medium</th>
-                                <th colspan="2" scope="col" class="size-table__cell">Large</th>
+                                <th colspan="2" scope="col" class="size-table__cell size-table__cell--header">구분</th>
+                                <th colspan="2" scope="col" class="size-table__cell size-table__cell--header">Small</th>
+                                <th colspan="2" scope="col" class="size-table__cell size-table__cell--header">Medium
+                                </th>
+                                <th colspan="2" scope="col" class="size-table__cell size-table__cell--header">Large</th>
                                 <th class="size-table__cell">X-Large</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th rowspan="3" scope="rowgroup" class="size-table__cell">미국 남아<br>[Boys 2-7]</th>
-                                <th scope="row" class="size-table__cell">사이즈</th>
+                                <th rowspan="3" scope="rowgroup" class="size-table__cell size-table__cell--header">미국
+                                    남아<br>[Boys 2-7]</th>
+                                <th scope="row" class="size-table__cell size-table__cell--header">사이즈</th>
                                 <td class="size-table__cell">2T</td>
                                 <td class="size-table__cell">3T</td>
                                 <td class="size-table__cell">4T</td>
@@ -57,7 +61,7 @@
                                 <td class="size-table__cell">7</td>
                             </tr>
                             <tr>
-                                <th scope="row" class="size-table__cell">키</th>
+                                <th scope="row" class="size-table__cell size-table__cell--header">키</th>
                                 <td class="size-table__cell">84-91</td>
                                 <td class="size-table__cell">91-99</td>
                                 <td class="size-table__cell">91-99</td>
@@ -67,7 +71,7 @@
                                 <td class="size-table__cell">122-130</td>
                             </tr>
                             <tr>
-                                <th scope="row" class="size-table__cell">몸무게</th>
+                                <th scope="row" class="size-table__cell size-table__cell--header">몸무게</th>
                                 <td class="size-table__cell">13-15</td>
                                 <td class="size-table__cell">14-15</td>
                                 <td class="size-table__cell">13-15</td>
@@ -77,8 +81,9 @@
                                 <td class="size-table__cell">23-25</td>
                             </tr>
                             <tr>
-                                <th rowspan="3" scope="rowgroup" class="size-table__cell">미국 여아<br>[Girls 2-6X]</th>
-                                <th scope="row" class="size-table__cell">사이즈</th>
+                                <th rowspan="3" scope="rowgroup" class="size-table__cell size-table__cell--header">미국
+                                    여아<br>[Girls 2-6X]</th>
+                                <th scope="row" class="size-table__cell size-table__cell--header">사이즈</th>
                                 <td class="size-table__cell">2T</td>
                                 <td class="size-table__cell">3T</td>
                                 <td class="size-table__cell">4T</td>
@@ -88,7 +93,7 @@
                                 <td class="size-table__cell">6X</td>
                             </tr>
                             <tr>
-                                <th scope="row" class="size-table__cell">키</th>
+                                <th scope="row" class="size-table__cell size-table__cell--header">키</th>
                                 <td class="size-table__cell">84-91</td>
                                 <td class="size-table__cell">91-99</td>
                                 <td class="size-table__cell">91-99</td>
@@ -98,7 +103,7 @@
                                 <td class="size-table__cell">122-130</td>
                             </tr>
                             <tr>
-                                <th scope="row" class="size-table__cell">몸무게</th>
+                                <th scope="row" class="size-table__cell size-table__cell--header">몸무게</th>
                                 <td class="size-table__cell">13-15</td>
                                 <td class="size-table__cell">14-15</td>
                                 <td class="size-table__cell">13-15</td>
@@ -113,43 +118,43 @@
                     <table class="refund-table tables">
                         <caption class="tables__caption">환불 가능 금액 조회</caption>
                         <colgroup>
-                            <col class="double">
-                            <col span="3" class="single">
+                            <col class="col-width--doubled">
+                            <col span="3" class="col-width">
                         </colgroup>
-                        <thead>
+                        <thead class="refund-table__header">
                             <tr>
-                                <th scope="col">구분</th>
-                                <th scope="col">환불가능액</th>
-                                <th scope="col">수수료</th>
-                                <th scope="col">총 환불금액</th>
+                                <th scope="col" class="refund-table__cell refund-table__cell--header">구분</th>
+                                <th scope="col" class="refund-table__cell refund-table__cell--header">환불가능액</th>
+                                <th scope="col" class="refund-table__cell refund-table__cell--header">수수료</th>
+                                <th scope="col" class="refund-table__cell refund-table__cell--header">총 환불금액</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">게임 보상금액</th>
-                                <td>100,000원</td>
-                                <td>1,000원</td>
-                                <td>99,000원</td>
+                                <th scope="row" class="refund-table__cell refund-table__cell--header">게임 보상금액</th>
+                                <td class="refund-table__cell">100,000원</td>
+                                <td class="refund-table__cell">1,000원</td>
+                                <td class="refund-table__cell">99,000원</td>
                             </tr>
                             <tr>
-                                <th scope="row">월정액제 보상금액</th>
-                                <td>10,000원</td>
-                                <td>5,000원</td>
-                                <td>5,000원</td>
+                                <th scope="row" class="refund-table__cell refund-table__cell--header">월정액제 보상금액</th>
+                                <td class="refund-table__cell">10,000원</td>
+                                <td class="refund-table__cell">5,000원</td>
+                                <td class="refund-table__cell">5,000원</td>
                             </tr>
                             <tr>
-                                <th scope="row">코인</th>
-                                <td>9,000원</td>
-                                <td>500원</td>
-                                <td>8,500원</td>
+                                <th scope="row" class="refund-table__cell refund-table__cell--header">코인</th>
+                                <td class="refund-table__cell">9,000원</td>
+                                <td class="refund-table__cell">500원</td>
+                                <td class="refund-table__cell">8,500원</td>
                             </tr>
                         </tbody>
-                        <tfoot>
+                        <tfoot class="refund-table__footer">
                             <tr>
-                                <th scope="row">총합계</th>
-                                <td>119,000원</td>
-                                <td>6,500원</td>
-                                <td>112,500원</td>
+                                <th scope="row" class="refund-table__cell refund-table__cell--header">총합계</th>
+                                <td class="refund-table__cell">119,000원</td>
+                                <td class="refund-table__cell">6,500원</td>
+                                <td class="refund-table__cell">112,500원</td>
                             </tr>
                         </tfoot>
                     </table>
@@ -160,127 +165,136 @@
                 <h3 id="form" class="articles__title">폼 요소</h3>
                 <article class="articles__container">
                     <!-- 회원가입 폼 -->
-                    <fieldset class="signUp">
-                        <legend>회원가입</legend>
-                        <!-- 유저 아이디 입력 -->
-                        <label for="userId" class="labels">아이디</label><input type="text" id="userId" class="inputs">
-                        <!-- 유저 비밀번호 입력 -->
-                        <label for="userPw" class="labels">비밀번호</label><input type="password" id="userPw"
-                            class="inputs">
-                        <!-- 유저 이름 입력 -->
-                        <label for="userName" class="labels">이름</label><input type="text" id="userName" class="inputs">
-                        <!-- 유저 생년월일 선택 -->
-                        <label for="userBirth" class="labels">생년월일</label>
-                        <div class="evenGrid">
-                            <select id="userBirth" name="birthYear" class="inputs">
-                                <option value="">년도</option>
-                                <option value="2008">2008</option>
-                                <option value="2007">2007</option>
-                                <option value="2006">2006</option>
-                                <option value="2005">2005</option>
-                                <option value="2004">2004</option>
-                                <option value="2003">2003</option>
-                                <option value="2002">2002</option>
-                                <option value="2001">2001</option>
-                                <option value="2000">2000</option>
-                                <option value="1999">1999</option>
-                                <option value="1998">1998</option>
-                                <option value="1997">1997</option>
-                                <option value="1996">1996</option>
-                                <option value="1995">1995</option>
-                            </select>
-                            <select name="birthMonth" class="inputs">
-                                <option value="">월</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                            </select>
-                            <select name="birthDate" class="inputs">
-                                <option value="">일</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                                <option value="17">17</option>
-                                <option value="18">18</option>
-                                <option value="19">19</option>
-                                <option value="20">20</option>
-                                <option value="21">21</option>
-                                <option value="22">22</option>
-                                <option value="23">23</option>
-                                <option value="24">24</option>
-                                <option value="25">25</option>
-                                <option value="26">26</option>
-                                <option value="27">27</option>
-                                <option value="28">28</option>
-                                <option value="29">29</option>
-                                <option value="30">30</option>
-                                <option value="31">31</option>
-                            </select>
-                        </div>
-                        <!-- 유저 성별 선택 -->
-                        <span class="labels">성별</span>
-                        <div class="userGender"><input type="radio" id="male" name="gender"><label for="male"
-                                class="inputs">남자</label></div>
-                        <div class="userGender"><input type="radio" id="female" name="gender"><label for="female"
-                                class="inputs">여자</label></div>
-                        <!-- 유저 이메일 입력 -->
-                        <label for="userEmail" class="labels">이메일</label><input type="text" id="userEmail"
-                            placeholder="이메일 주소에 '@'를 포함해주세요." class="inputs">
-                        <!-- 유저 휴대전화 번호 입력 및 번호인증 -->
-                        <label for="userPhone" class="labels">휴대전화</label>
-                        <div class="oddGrid">
-                            <input type="text" id="userPhone" placeholder="숫자만 입력해주세요." class="inputs"><button
-                                type="submit" class="submitButton">인증번호 받기</button>
-                        </div>
-                        <input type="text" placeholder="인증번호를 입력해주세요." class="inputs">
-                        <!-- 유저 취미 입력 -->
-                        <span class="labels">취미</span>
-                        <div class="evenGrid">
-                            <div class="userHobby"><input type="checkbox" id="exercise" name="hobby"><label
-                                    for="exercise" class="inputs">운동</label></div>
-                            <div class="userHobby"><input type="checkbox" id="cooking" name="hobby"><label for="cooking"
-                                    class="inputs">요리</label></div>
-                            <div class="userHobby"><input type="checkbox" id="travel" name="hobby"><label for="travel"
-                                    class="inputs">여행</label></div>
-                            <div class="userHobby"><input type="checkbox" id="gaming" name="hobby"><label for="gaming"
-                                    class="inputs">게임</label></div>
-                            <div class="userHobby"><input type="checkbox" id="computer" name="hobby"><label
-                                    for="computer" class="inputs">컴퓨터</label></div>
-                            <div class="userHobby"><input type="checkbox" id="music" name="hobby"><label for="music"
-                                    class="inputs">음악</label></div>
-                            <div class="userHobby"><input type="checkbox" id="movie" name="hobby"><label for="movie"
-                                    class="inputs">영화</label></div>
-                            <div class="userHobby"><input type="checkbox" id="reading" name="hobby"><label for="reading"
-                                    class="inputs">독서</label></div>
-                        </div>
-                        <!-- 가입인사 입력 -->
-                        <label for="greeting" class="labels">가입인사</label><textarea rows="7" id="greeting"
-                            class="inputs"></textarea>
-                        <!-- 회원가입 폼 전송 버튼 -->
-                        <button type="submit" class="submitButton">가입하기</button>
-                    </fieldset>
+                    <form action="/" method="post" class="forms">
+                        <fieldset class="signup-form">
+                            <legend class="signup-form__legend">회원가입</legend>
+                            <!-- 유저 아이디 입력 -->
+                            <label for="userId" class="signup-form__label">아이디</label><input type="text" id="userId"
+                                class="signup-form__input">
+                            <!-- 유저 비밀번호 입력 -->
+                            <label for="userPw" class="signup-form__label">비밀번호</label><input type="password"
+                                id="userPw" class="signup-form__input">
+                            <!-- 유저 이름 입력 -->
+                            <label for="userName" class="signup-form__label">이름</label><input type="text" id="userName"
+                                class="signup-form__input">
+                            <!-- 유저 생년월일 선택 -->
+                            <label for="userBirth" class="signup-form__label">생년월일</label>
+                            <div class="even-grid">
+                                <select id="userBirth" name="birthYear" class="signup-form__input">
+                                    <option value="">년도</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2000">2000</option>
+                                    <option value="1999">1999</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1995">1995</option>
+                                </select>
+                                <select name="birthMonth" class="signup-form__input">
+                                    <option value="">월</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                                <select name="birthDate" class="signup-form__input">
+                                    <option value="">일</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                            </div>
+                            <!-- 유저 성별 선택 -->
+                            <span class="signup-form__label">성별</span>
+                            <div class="radio-container">
+                                <input type="radio" id="male" name="gender" class="radio-container__btn"><label
+                                    for="male" class="radio-container__label">남자</label>
+                            </div>
+                            <div class="radio-container">
+                                <input type="radio" id="female" name="gender" class="radio-container__btn"><label
+                                    for="female" class="radio-container__label">여자</label>
+                            </div>
+                            <!-- 유저 이메일 입력 -->
+                            <label for="userEmail" class="signup-form__label">이메일</label><input type="text"
+                                id="userEmail" placeholder="이메일 주소에 '@'를 포함해주세요." class="signup-form__input">
+                            <!-- 유저 휴대전화 번호 입력 및 번호인증 -->
+                            <label for="userPhone" class="signup-form__label">휴대전화</label>
+                            <div class="odd-grid">
+                                <input type="text" id="userPhone" placeholder="숫자만 입력해주세요."
+                                    class="signup-form__input"><button type="submit" class="signup-form__btn">인증번호
+                                    받기</button>
+                            </div>
+                            <input type="text" placeholder="인증번호를 입력해주세요." class="signup-form__input">
+                            <!-- 유저 취미 입력 -->
+                            <span class="signup-form__label">취미</span>
+                            <div class="even-grid">
+                                <div class="checkbox-container"><input type="checkbox" id="exercise" name="hobby"
+                                        class="checkbox-container__btn"><label for="exercise">운동</label></div>
+                                <div class="checkbox-container"><input type="checkbox" id="cooking" name="hobby"
+                                        class="checkbox-container__btn"><label for="cooking">요리</label></div>
+                                <div class="checkbox-container"><input type="checkbox" id="travel" name="hobby"
+                                        class="checkbox-container__btn"><label for="travel">여행</label></div>
+                                <div class="checkbox-container"><input type="checkbox" id="gaming" name="hobby"
+                                        class="checkbox-container__btn"><label for="gaming">게임</label></div>
+                                <div class="checkbox-container"><input type="checkbox" id="computer" name="hobby"
+                                        class="checkbox-container__btn"><label for="computer">컴퓨터</label></div>
+                                <div class="checkbox-container"><input type="checkbox" id="music" name="hobby"
+                                        class="checkbox-container__btn"><label for="music">음악</label></div>
+                                <div class="checkbox-container"><input type="checkbox" id="movie" name="hobby"
+                                        class="checkbox-container__btn"><label for="movie">영화</label></div>
+                                <div class="checkbox-container"><input type="checkbox" id="reading" name="hobby"
+                                        class="checkbox-container__btn"><label for="reading">독서</label></div>
+                            </div>
+                            <!-- 가입인사 입력 -->
+                            <label for="greeting" class="signup-form__label">가입인사</label><textarea rows="7"
+                                id="greeting" class="signup-form__input"></textarea>
+                            <!-- 회원가입 폼 전송 버튼 -->
+                            <button type="submit" class="signup-form__btn">가입하기</button>
+                        </fieldset>
+                    </form>
                 </article>
             </section>
             <!-- 리스트 요소 -->
@@ -343,16 +357,16 @@
                             <dl>
                                 <dt>[날씨] 내일도 35도 안팎 폭염・내륙 소나기⋯습도 높아 후텁지근</dt>
                                 <dd>
-                                    오늘은 입추 절기지만 가을은 아직 멀리있는 것 같습니다. 일부 내륙에는 소나기가 지났지만 소나기도 더위의 기세를 누그러뜨리진 못했는데요. 
-                                    동해안을 제외한 전국 대부분 지방에 폭염 특보가 이어지는 가운데 내일도 한낮에 서울과 대전 35도, 광주와 대구가 36도까지 오를 것으로 예상됩니다. 
+                                    오늘은 입추 절기지만 가을은 아직 멀리있는 것 같습니다. 일부 내륙에는 소나기가 지났지만 소나기도 더위의 기세를 누그러뜨리진 못했는데요.
+                                    동해안을 제외한 전국 대부분 지방에 폭염 특보가 이어지는 가운데 내일도 한낮에 서울과 대전 35도, 광주와 대구가 36도까지 오를 것으로 예상됩니다.
                                     내일도 대기가 불안정해지면서 오후에 내륙에는 소나기가 지나는 곳이 있겠습니다.
                                 </dd>
                             </dl>
                             <dl>
                                 <dt>[펫카드] 강아지 중성화가 필요한 이유</dt>
                                 <dd>
-                                    (서울=뉴스1) 최서윤 기자,방은영 디자이너 = 강아지 중성화 수술을 놓고 찬반이 팽팽하게 엇갈린다. 
-                                    많은 사람들은 사람들과 공존하려면 개체수 조절을 위해 필요하다고 주장한다. 
+                                    (서울=뉴스1) 최서윤 기자,방은영 디자이너 = 강아지 중성화 수술을 놓고 찬반이 팽팽하게 엇갈린다.
+                                    많은 사람들은 사람들과 공존하려면 개체수 조절을 위해 필요하다고 주장한다.
                                     그러나 어떤 사람들은 인위적인 수술은 안된다며 반대한다.
                                 </dd>
                             </dl>
@@ -360,9 +374,9 @@
                             <dl>
                                 <dt>다이어트에 좋은 여름 복숭아, 먹으면 안 되는 사람 있어</dt>
                                 <dd>
-                                    복숭아가 제철이다. 여름 복숭아는 다양한 건강 효과를 낸다. 복숭아에는 포도당, 과당, 수분이 풍부하고 
-                                    유기산(산성을 띠는 물질로 식품에서 신맛을 냄)이 0.5% 정도로 적게 들어 단맛이 강하다. 
-                                    복숭아의 열량은 100g당 36kcal다. 복숭아 한 개에 약 100kcal 정도다. 포만감에 비해 열량이 적은 편이어서 
+                                    복숭아가 제철이다. 여름 복숭아는 다양한 건강 효과를 낸다. 복숭아에는 포도당, 과당, 수분이 풍부하고
+                                    유기산(산성을 띠는 물질로 식품에서 신맛을 냄)이 0.5% 정도로 적게 들어 단맛이 강하다.
+                                    복숭아의 열량은 100g당 36kcal다. 복숭아 한 개에 약 100kcal 정도다. 포만감에 비해 열량이 적은 편이어서
                                     다이어트를 하는 사람에게도 좋다. 비타민이 많아서 피로 해소에 도움이 된다.
                                 </dd>
                             </dl>
@@ -418,11 +432,11 @@
                     </article>
                 </article>
             </section>
-        </article>
+        </div>
     </main>
-    <footer>
-        <p class="info">주소: 경기도 성남시 분당구, E-MAIL: honggildong@naver.com</p>
-        <p class="copyright">Copyright ⓒ Hong Gil Dong. All Rights Reserved.</p>
+    <footer class="footer">
+        <address class="footer__contact">주소: 경기도 성남시 분당구, E-MAIL: honggildong@naver.com</address>
+        <p class="footer__copyright">Copyright ⓒ Hong Gil Dong. All Rights Reserved.</p>
     </footer>
 </body>
 
