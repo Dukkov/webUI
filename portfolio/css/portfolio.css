@@ -33,6 +33,10 @@ input[type="checkbox"] {
 textarea {
     resize: none;
 }
+a {
+    color: inherit;
+    text-decoration: none;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, main, menu, nav, section {
@@ -115,6 +119,13 @@ table {
     font-weight: bold;
 }
 
+.nav__link {
+    /* Display & Box Model */
+    display: block;
+    /* Color */
+    color: #000;
+}
+
 .content {
     /* Display & Box Model */
     padding: 0 40px;
@@ -162,7 +173,7 @@ table {
     font-size: 12px;
 }
 /* 테이블 요소 article 시작 */
-.tables {vertical-align: middle;}
+.table-article {vertical-align: middle;}
 
 .tables__caption {
     /* Display & Box Model */
@@ -354,6 +365,194 @@ table {
     margin-top: 20px;
     /* Text */
     font-size: 16px;
+}
+
+/* 리스트 요소 article 시작 */
+.list-article__title {
+    /* Display & Box Model */
+    margin-bottom: 15px;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.list-article__container {
+    /* Display & Box Model */
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #e4e4e4;
+    margin-bottom: 50px;
+}
+
+/* 사전 검색 결과 list */
+.search-result {padding: 30px 20px;}
+
+.search-result__title--main {
+    /* Display & Box Model */
+    margin-top: 25px;
+    margin-bottom: 50px;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.search-result__title--sub {
+    /* Display & Box Model */
+    display: inline-block;
+    margin-right: 5px;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.search-result__src {
+    /* Display & Box Model */
+    display: inline-block;
+    /* Color */
+    color: #559bfa;
+    /* Text */
+    font-size: 12px;
+}
+
+.search-result__dsc {
+    /* Display & Box Model */
+    margin-top: 7px;
+    margin-bottom: 20px;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* 실시간 검색어 list */
+.topic-keyword {
+    /* Display & Box Model */
+    width: 240px;
+    padding: 10px 20px;
+}
+
+.topic-keyword__item {
+    /* Display & Box Model */
+    margin: 10px 0;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 12px;
+    /* Other */
+    counter-increment: step-counter;
+}
+
+.topic-keyword__item:hover {text-decoration: underline;}
+
+.topic-keyword__item::before {
+    /* Display & Box Model */
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #e0e0e0;
+    margin-right: 10px;
+    /* Color */
+    color: #666;
+    /* Text */
+    font-size: 10px;
+    text-align: center;
+    line-height: 15px;
+    /* Other */
+    content: counter(step-counter);
+}
+
+/* 쿠키 이용안내 list */
+.cookie-info {padding-bottom: 10px;}
+
+.cookie-info__item {
+    /* Display & Box Model */
+    list-style: disc;
+    list-style-position: inside;
+    margin-bottom: 10px;
+    margin-left: 17px;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 12px;
+    text-indent: -17px;
+    line-height: 1.5;
+}
+
+.cookie-info__item:first-of-type {font-weight: bold;}
+
+.cookie-info__item:first-of-type span {color: #559bfa;}
+
+.cookie-info__item:nth-of-type(2) span {color: #ec5336;}
+
+.cookie-info__item .link {
+    /* Color */
+    color: #559bfa;
+    /* Text */
+    text-decoration: underline;
+}
+
+/* 뉴스 list */
+.news-grid {
+    display: grid;
+    grid-auto-rows: 100px;
+    grid-gap: 1px;
+    background-color: #e4e4e4;
+}
+
+.news-grid__container {
+    line-height: 100px;
+    background-color: white;
+}
+
+.news-text {
+    display: inline-block;
+    width: 100%;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+.news-text--top{
+    width: 805px;
+    height: 80px;
+    vertical-align: top;
+}
+
+.news-text--bottom {
+    width: 805px;
+    height: 80px;
+    vertical-align: bottom;
+}
+
+.news__img {
+    margin-right: 7px;
+}
+
+.news__img--bottom {
+    vertical-align: bottom;
+}
+
+.news__headline {
+    color: #00c;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.news__summary {
+    padding-top: 5px;
+    color: #000;
+    font-size: 12px;
+    line-height: 1.5;
+    word-break: break-all;
 }
 
 .footer {
