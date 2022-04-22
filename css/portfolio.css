@@ -1,0 +1,722 @@
+@charset "UTF-8";
+/* Reset css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+}
+
+textarea {
+    resize: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Main css */
+.body {font-family: '나눔고딕', 'Nanum Gothic', '돋움', Dotum, sans-serif;}
+
+.header {
+    /* Display & Box Model */
+    min-width: 1080px;
+    height: 120px;
+    /* Color */
+    background-color: #000;
+    color: #fff;
+}
+
+.header__title {
+    /* Display & Box Model */
+    width: 1040px;
+    padding-left: 40px;
+    margin: auto;
+    /* Text */
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 120px;
+}
+
+.main {
+    /* Display & Box Model */
+    width: 1080px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.nav {
+    /* Display & Box Model */
+    padding: 0 33px;
+    /* Text */
+    font-size: 0;
+}
+
+.nav__item {
+    /* Display & Box Model */
+    display: inline-block;
+    width: 322px;
+    height: 33px;
+    border: 1px solid #d1d1d1;
+    margin: 40px 7px;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 16px;
+    line-height: 33px;
+    text-align: center;
+}
+
+.nav__item:hover {
+    /* Display & Box Model */
+    border: 1px solid #454545;
+    /* Text */
+    font-weight: bold;
+}
+
+.nav__link {
+    /* Display & Box Model */
+    display: block;
+    /* Color */
+    color: #000;
+}
+
+.content {
+    /* Display & Box Model */
+    padding: 0 40px;
+    margin-top: 10px;
+}
+
+.content__title {
+    /* Display & Box Model */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #454545;
+    margin: 0;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.articles {
+    /* Display & Box Model */
+    padding: 0;
+    margin: 30px 0;
+}
+
+.articles__title {
+    /* Display & Box Model */
+    height: 46px;
+    padding-left: 15px;
+    border: 1px solid #d1d1d1;
+    /* Color */
+    background-color: #f7f7f7;
+    color: #333;
+    /* Text */
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 46px;
+}
+
+.articles__container {
+    /* Display & Box Model */
+    padding: 30px;
+    border: 1px solid #d1d1d1;
+    border-top: 0;
+    /* Text */
+    font-size: 12px;
+}
+
+/* -테이블 요소 article 시작- */
+.table-article {vertical-align: middle;}
+
+.tables__caption {
+    /* Display & Box Model */
+    margin-bottom: 15px;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.size-table {
+    /* Display & Box Model */
+    width: 100%;
+    margin-bottom: 45px;
+    /* Color */
+    color: #555;
+}
+
+.size-table .col-width {width: 90px;}
+
+.size-table .col-width--doubled {width: 150px;}
+
+.size-table__header {background-color: #fbfbfb;}
+
+.size-table__cell {
+    /* Display & Box Model */
+    height: 35px;
+    border: 1px solid #e4e4e4;
+    /* Text */
+    text-align: center;
+}
+
+.size-table__cell--header {font-weight: bold;}
+
+.refund-table {
+    /* Display & Box Model */
+    width: 100%;
+    /* Color */
+    color: #555;
+}
+
+.refund-table .col-width {width: 200px;}
+
+.refund-table__header {
+    /* Display & Box Model */
+    border-top: 2px solid #a5a5a5;
+    border-bottom: 1px solid #e4e4e4;
+    /* Color */
+    background-color: #fbfbfb;
+}
+
+.refund-table__cell {height: 35px;}
+
+/* 헤더 셀을 제외한 일반 셀 */
+.refund-table__cell:not(th) {
+    /* Display & Box Model */
+    padding-right: 65px;
+    /* Text */
+    text-align: right;
+}
+
+.refund-table__footer {
+    /* Display & Box Model */
+    border-top: 1px solid #a5a5a5;
+    border-bottom: 1px solid #e4e4e4;
+    /* Text */
+    font-weight: bold;
+}
+
+/* -폼 요소 article 시작- */
+.signup-form {
+    /* Positioning */
+    position: relative;
+    /* Display & Box Model */
+    padding: 20px;
+    padding-top: 0;
+    border: 1px solid #e4e4e4;
+    margin-top: 30px;
+    /* Color */
+    background-color: #fbfbfb;
+}
+
+.signup-form__legend {
+    /* Positioning */
+    position: absolute;
+    top: -30px;
+    left: 0px;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* 입력받을 정보명 */
+.signup-form__label {
+    /* Display & Box Model */
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* input 요소 기본설정 */
+.signup-form__input {
+    /* Display & Box Model */
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #e4e4e4;
+    padding: 7px;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 12px;
+    font-family: '나눔고딕', 'Nanum Gothic', '돋움', Dotum, sans-serif;
+}
+
+/* textarea를 제외한 input 요소 높이 고정 */
+.signup-form__input:not(textarea) {height: 35px;}
+
+/* button 요소 기본설정 */
+.signup-form__btn {
+    /* Display & Box Model */
+    box-sizing: border-box;
+    border: 1px solid #08a600;
+    /* Color */
+    background-color: #4ec53d;
+    color: #fff;
+    /* Other */
+    cursor: pointer;
+}
+
+/* 컨테이너 너비가 일정한 그리드 (생년월일, 취미)*/
+.even-grid {
+    /* Display & Box Model */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    column-gap: 13px;
+}
+
+/* 컨테이너 너비가 일정하지 않은 그리드 (휴대전화) */
+.odd-grid {
+    /* Display & Box Model */
+    display: grid;
+    grid-template-columns: auto 150px;
+    column-gap: 13px;
+    margin-bottom: 5px;
+}
+
+/* radio 요소 컨테이너 설정 (성별) */
+.radio-container {
+    /* Display & Box Model */
+    display: inline-block;
+    width: 110px;
+    height: 15px;
+    padding-top: 5px;
+}
+
+.radio-container__btn, .checkbox-container__btn{
+    margin-right: 5px;
+    vertical-align: top;
+}
+
+/* checkbox 요소 컨테이너 설정 (취미) */
+.checkbox-container {
+    /* Display & Box Model */
+    height: 15px;
+    padding-top: 5px;
+}
+
+/* 휴대전화 인증번호 받기 버튼 */
+.odd-grid .signup-form__btn {
+    /* Display & Box Model */
+    width: 150px;
+    /* Text */
+    font-size: 12px;
+}
+
+/* 가입하기 버튼 */
+.signup-form>.signup-form__btn {
+    /* Display & Box Model */
+    width: 100%;
+    height: 45px;
+    margin-top: 20px;
+    /* Text */
+    font-size: 16px;
+}
+
+/* Css only for IE*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .even-grid {font-size: 0;}
+    .odd-grid {font-size: 0;}
+    .birth-select {
+        display: inline-block;
+        width: 290px;
+        margin-right: 13px;
+    }
+    .birth-select:last-of-type {margin: 0;}
+    .phone-number {
+        width: 733px; 
+        margin-right: 13px;
+    }
+    .odd-grid .signup-form__btn {height: 35px;}
+    .checkbox-container {
+        display: inline-block;
+        width: 112px;
+    }
+    .checkbox-container__label {font-size: 12px;}
+}
+
+/* -리스트 요소 article 시작- */
+.list-article__title {
+    /* Display & Box Model */
+    margin-bottom: 15px;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.list-article__container {
+    /* Display & Box Model */
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #e4e4e4;
+    margin-bottom: 50px;
+}
+
+/* 사전 검색 결과 list */
+.search-result {padding: 30px 20px;}
+
+.search-result__title--main {
+    /* Display & Box Model */
+    margin-top: 25px;
+    margin-bottom: 50px;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.search-result__title--sub {
+    /* Display & Box Model */
+    display: inline-block;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.search-result__title--sub::after {
+    /* Display & Box Model */
+    display: inline-block;
+    padding-left: 5px;
+    /* Color */
+    color: #559bfa;
+    /* Text */
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.search-result__title--sub:first-of-type::after {
+    content: "영양학사전";
+}
+
+.search-result__title--sub:last-of-type::after {
+    content: "Basic 중학생을 위한 기술, 가정 용어사전";
+}
+
+.search-result__dsc {
+    /* Display & Box Model */
+    margin-top: 7px;
+    margin-bottom: 20px;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* 실시간 검색어 list */
+.topic-keyword {
+    /* Display & Box Model */
+    width: 240px;
+    padding: 10px 20px;
+}
+
+.topic-keyword__item {
+    /* Display & Box Model */
+    margin: 10px 0;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 12px;
+    /* Other */
+    counter-increment: step-counter;
+}
+
+.topic-link:hover {text-decoration: underline;}
+
+.topic-keyword__item::before {
+    /* Display & Box Model */
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #e0e0e0;
+    margin-right: 10px;
+    /* Color */
+    color: #666;
+    /* Text */
+    font-size: 10px;
+    text-align: center;
+    line-height: 15px;
+    /* Other */
+    content: counter(step-counter);
+}
+
+/* 쿠키 이용안내 list */
+.cookie-info {padding-bottom: 10px;}
+
+.cookie-info__item {
+    /* Display & Box Model */
+    list-style: disc;
+    list-style-position: inside;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 12px;
+    text-indent: -17px;
+    line-height: 1.5;
+}
+
+.cookie-info__item:first-of-type {font-weight: bold;}
+
+.cookie-info__item:first-of-type span {color: #559bfa;}
+
+.cookie-info__item:nth-of-type(2) span {color: #ec5336;}
+
+.cookie-info__item .link {
+    /* Color */
+    color: #559bfa;
+    /* Text */
+    text-decoration: underline;
+}
+
+/* 뉴스 list */
+.news-grid {
+    /* Display & Box Model */
+    display: grid;
+    grid-auto-rows: 100px;
+    grid-gap: 1px;
+    /* Color */
+    background-color: #e4e4e4;
+}
+
+.news-grid__container {
+    /* Display & Box Model */
+    line-height: 100px;
+    /* Color */
+    background-color: #fff;
+    font-size: 0;
+}
+
+.news-text {
+    /* Display & Box Model */
+    display: inline-block;
+    width: 100%;
+    /* Text */
+    line-height: 1.5;
+    vertical-align: middle;
+}
+
+.news-text--top, .news-text--bottom {
+    /* Display & Box Model */
+    width: 805px;
+    height: 80px;
+    padding-left: 10px;
+}
+
+.news-text--top {vertical-align: top;}
+
+.news-text--bottom {vertical-align: bottom;}
+
+.news__thumbnail--bottom {vertical-align: bottom;}
+
+.news__headline {
+    /* Color */
+    color: #00c;
+    /* Text */
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.news__summary {
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 12px;
+    word-break: break-all;
+}
+
+/* 웹툰 list */
+.webtoon {
+    /* Display & Box Model */
+    padding-right: 21px;
+    margin: 0;
+}
+
+.webtoon-grid {
+    /* Display & Box Model */
+    display: grid;
+    grid-template-columns: repeat(3, 285px);
+    grid-auto-rows: minmax(200px, auto);
+    column-gap: 20px;
+}
+
+.webtoon-link:hover {text-decoration: underline;}
+
+.webtoon__thumbnail {margin-bottom: 3px;}
+
+.webtoon__title {
+    /* Display & Box Model */
+    height: 20px;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.webtoon__episode {
+    /* Display & Box Model */
+    height: 20px;
+    /* Color */
+    color: #000;
+    /* Text */
+    font-size: 12px;
+    line-height: 20px;
+}
+
+/* 컷툰, 스마트툰 표시 박스 */
+.webtoon__title--cut::before, .webtoon__title--smart::before {
+    /* Display & Box Model */
+    display: inline-block;
+    margin-right: 3px;
+    /* Color */
+    color: #fff;
+    /* Text */
+    font-size: 10px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: text-bottom;
+    line-height: 13px;
+}
+
+/* 컷툰 표시 박스 */
+.webtoon__title--cut::before {
+    /* Display & Box Model */
+    width: 27px;
+    border: 1px solid #71b036;
+    /* Color */
+    background-color: #80c83d;
+    /* Other */
+    content: "컷툰";
+}
+
+/* 스마트툰 표시 박스 */
+.webtoon__title--smart::before {
+    /* Display & Box Model */
+    width: 47px;
+    border: 1px solid #df4e28;
+    /* Color */
+    background-color: #ec5336;
+    /* Other */
+    content: "스마트툰";
+}
+
+/* Css only for IE */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .cookie-info__item {
+        padding-left: 20px;
+        text-indent: -23px;
+    }
+    .news-grid__container {
+        height: 100px; 
+        border-bottom: 1px solid #e4e4e4;
+    }
+    .news-grid__container:last-of-type {border: 0;}
+    .webtoon-grid {font-size: 0;}
+    .webtoon-grid__container {
+        display: inline-block;
+        height: 200px; 
+        margin-right: 20px;
+    }
+    .webtoon-grid__container:nth-of-type(3n) {margin: 0;}
+}
+
+/* Css only for Firefox */
+@-moz-document url-prefix() {
+    .cookie-info__item {
+        padding-left: 17px;
+        text-indent: -16px;
+    }
+    .cookie-info__item:before {
+        margin-left: 5px;
+        content: "";
+    }
+}
+
+.footer {
+    /* Display & Box Model */
+    min-width: 1080px;
+    padding-top: 15px;
+    border-top: 1px solid #d1d1d1;
+    /* Text */
+    font-size: 12px;
+    text-align: center;
+}
+
+.footer__contact {
+    /* Display & Box Model */
+    margin: 15px 0;
+    /* Color */
+    color: #999;
+}
+
+.footer__copyright {
+    /* Display & Box Model */
+    margin: 15px 0;
+    /* Color */
+    color: #000;
+}
