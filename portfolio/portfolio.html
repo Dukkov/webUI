@@ -44,7 +44,7 @@
                                 <th colspan="2" scope="col" class="size-table__cell size-table__cell--header">Medium
                                 </th>
                                 <th colspan="2" scope="col" class="size-table__cell size-table__cell--header">Large</th>
-                                <th class="size-table__cell">X-Large</th>
+                                <th class="size-table__cell size-table__cell--header">X-Large</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -180,7 +180,7 @@
                             <!-- 유저 생년월일 선택 -->
                             <label for="userBirth" class="signup-form__label">생년월일</label>
                             <div class="even-grid">
-                                <select id="userBirth" name="birthYear" class="signup-form__input">
+                                <select id="userBirth" name="birthYear" class="signup-form__input birth-select">
                                     <option value="">년도</option>
                                     <option value="2008">2008</option>
                                     <option value="2007">2007</option>
@@ -197,7 +197,7 @@
                                     <option value="1996">1996</option>
                                     <option value="1995">1995</option>
                                 </select>
-                                <select name="birthMonth" class="signup-form__input">
+                                <select name="birthMonth" class="signup-form__input birth-select">
                                     <option value="">월</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -212,7 +212,7 @@
                                     <option value="11">11</option>
                                     <option value="12">12</option>
                                 </select>
-                                <select name="birthDate" class="signup-form__input">
+                                <select name="birthDate" class="signup-form__input birth-select">
                                     <option value="">일</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -248,7 +248,7 @@
                                 </select>
                             </div>
                             <!-- 유저 성별 선택 -->
-                            <span class="signup-form__label">성별</span>
+                            <div class="signup-form__label">성별</div>
                             <div class="radio-container">
                                 <input type="radio" id="male" name="gender" class="radio-container__btn"><label
                                     for="male" class="radio-container__label">남자</label>
@@ -264,32 +264,41 @@
                             <label for="userPhone" class="signup-form__label">휴대전화</label>
                             <div class="odd-grid">
                                 <input type="text" id="userPhone" placeholder="숫자만 입력해주세요."
-                                    class="signup-form__input"><button type="submit" class="signup-form__btn">인증번호
+                                    class="signup-form__input phone-number"><button type="submit"
+                                    class="signup-form__btn">인증번호
                                     받기</button>
                             </div>
                             <input type="text" placeholder="인증번호를 입력해주세요." class="signup-form__input">
                             <!-- 유저 취미 입력 -->
-                            <span class="signup-form__label">취미</span>
+                            <div class="signup-form__label">취미</div>
                             <div class="even-grid">
                                 <div class="checkbox-container"><input type="checkbox" id="exercise" name="hobby"
-                                        class="checkbox-container__btn"><label for="exercise">운동</label></div>
+                                        class="checkbox-container__btn"><label for="exercise"
+                                        class="checkbox-container__label">운동</label></div>
                                 <div class="checkbox-container"><input type="checkbox" id="cooking" name="hobby"
-                                        class="checkbox-container__btn"><label for="cooking">요리</label></div>
+                                        class="checkbox-container__btn"><label for="cooking"
+                                        class="checkbox-container__label">요리</label></div>
                                 <div class="checkbox-container"><input type="checkbox" id="travel" name="hobby"
-                                        class="checkbox-container__btn"><label for="travel">여행</label></div>
+                                        class="checkbox-container__btn"><label for="travel"
+                                        class="checkbox-container__label">여행</label></div>
                                 <div class="checkbox-container"><input type="checkbox" id="gaming" name="hobby"
-                                        class="checkbox-container__btn"><label for="gaming">게임</label></div>
+                                        class="checkbox-container__btn"><label for="gaming"
+                                        class="checkbox-container__label">게임</label></div>
                                 <div class="checkbox-container"><input type="checkbox" id="computer" name="hobby"
-                                        class="checkbox-container__btn"><label for="computer">컴퓨터</label></div>
+                                        class="checkbox-container__btn"><label for="computer"
+                                        class="checkbox-container__label">컴퓨터</label></div>
                                 <div class="checkbox-container"><input type="checkbox" id="music" name="hobby"
-                                        class="checkbox-container__btn"><label for="music">음악</label></div>
+                                        class="checkbox-container__btn"><label for="music"
+                                        class="checkbox-container__label">음악</label></div>
                                 <div class="checkbox-container"><input type="checkbox" id="movie" name="hobby"
-                                        class="checkbox-container__btn"><label for="movie">영화</label></div>
+                                        class="checkbox-container__btn"><label for="movie"
+                                        class="checkbox-container__label">영화</label></div>
                                 <div class="checkbox-container"><input type="checkbox" id="reading" name="hobby"
-                                        class="checkbox-container__btn"><label for="reading">독서</label></div>
+                                        class="checkbox-container__btn"><label for="reading"
+                                        class="checkbox-container__label">독서</label></div>
                             </div>
                             <!-- 가입인사 입력 -->
-                            <label for="greeting" class="signup-form__label">가입인사</label><textarea rows="7"
+                            <label for="greeting" class="signup-form__label">가입인사</label><textarea rows="8"
                                 id="greeting" class="signup-form__input"></textarea>
                             <!-- 회원가입 폼 전송 버튼 -->
                             <button type="submit" class="signup-form__btn">가입하기</button>
@@ -307,16 +316,13 @@
                         <div class="list-article__container search-result">
                             <div class="search-result__title--main">프로젝트</div>
                             <dl>
-                                <dt class="search-result__title--sub">프로젝트
-                                </dt><span class="search-result__src">영양학사전</span>
+                                <dt class="search-result__title--sub">프로젝트</dt>
                                 <dd class="search-result__dsc">
                                     연구나 새로운 사업의 개발을 위한 유기적이고 조직적인 계획. 원자력 개발이나 우주개발 등은
                                     대형 프로젝트를 조직하여 이루어진다. 일반적으로는 특정한 목표, 계획을 위한 학습활동,
                                     실행계획 등을 가리킨다.
                                 </dd>
-                                <dt class="search-result__title--sub">프로젝트</dt><span class="search-result__src">Basic
-                                    중학생을 위한
-                                    기술, 가정 용어사전</span>
+                                <dt class="search-result__title--sub">프로젝트</dt>
                                 <dd class="search-result__dsc">
                                     어떤 특정한 목적 달성을 위하여 실시되는 시스템 개발, 프로그램 설계, 연구 개발 계획 혹은
                                     건설 공사 등과 같이 한 번에 그치는 성격을 갖는 단위 작업이나 사업.
@@ -329,16 +335,16 @@
                         <h4 class="list-article__title">실시간 검색어</h4>
                         <div class="list-article__container topic-keyword">
                             <ol>
-                                <li class="topic-keyword__item"><a href="#">입추</a></li>
-                                <li class="topic-keyword__item"><a href="#">런닝맨 유재석</a></li>
-                                <li class="topic-keyword__item"><a href="#">런닝맨</a></li>
-                                <li class="topic-keyword__item"><a href="#">소나기</a></li>
-                                <li class="topic-keyword__item"><a href="#">주간 날씨</a></li>
-                                <li class="topic-keyword__item"><a href="#">깔라만시</a></li>
-                                <li class="topic-keyword__item"><a href="#">내 아이디는 강남미인</a></li>
-                                <li class="topic-keyword__item"><a href="#">차은우</a></li>
-                                <li class="topic-keyword__item"><a href="#">한국사능력검정시험</a></li>
-                                <li class="topic-keyword__item"><a href="#">맛있는 녀석들</a></li>
+                                <li class="topic-keyword__item"><a href="#" class="topic-link">입추</a></li>
+                                <li class="topic-keyword__item"><a href="#" class="topic-link">런닝맨 유재석</a></li>
+                                <li class="topic-keyword__item"><a href="#" class="topic-link">런닝맨</a></li>
+                                <li class="topic-keyword__item"><a href="#" class="topic-link">소나기</a></li>
+                                <li class="topic-keyword__item"><a href="#" class="topic-link">주간 날씨</a></li>
+                                <li class="topic-keyword__item"><a href="#" class="topic-link">깔라만시</a></li>
+                                <li class="topic-keyword__item"><a href="#" class="topic-link">내 아이디는 강남미인</a></li>
+                                <li class="topic-keyword__item"><a href="#" class="topic-link">차은우</a></li>
+                                <li class="topic-keyword__item"><a href="#" class="topic-link">한국사능력검정시험</a></li>
+                                <li class="topic-keyword__item"><a href="#" class="topic-link">맛있는 녀석들</a></li>
                             </ol>
                         </div>
                     </article>
@@ -369,9 +375,11 @@
                         <div class="list-article__container news">
                             <div class="news-grid">
                                 <div class="news-grid__container">
-                                    <a href="#"><img src="image/thumbnail1.jpg" alt="80 by 80 size thumbnail" class="news__img"></a>
+                                    <a href="#"><img src="image/thumbnail1.jpg" alt="80 by 80 size thumbnail"
+                                            class="news__thumbnail"></a>
                                     <dl class="news-text news-text--top">
-                                        <dt class="news__headline"><a href="#">[날씨] 내일도 35도 안팎 폭염・내륙 소나기⋯습도 높아 후텁지근</a></dt>
+                                        <dt class="news__headline"><a href="#">[날씨] 내일도 35도 안팎 폭염・내륙 소나기⋯습도 높아 후텁지근</a>
+                                        </dt>
                                         <dd class="news__summary">
                                             오늘은 입추 절기지만 가을은 아직 멀리있는 것 같습니다. 일부 내륙에는 소나기가 지났지만 소나기도 더위의 기세를 누그러뜨리진 못했는데요.
                                             동해안을 제외한 전국 대부분 지방에 폭염 특보가 이어지는 가운데 내일도 한낮에 서울과 대전 35도, 광주와 대구가 36도까지 오를 것으로
@@ -391,7 +399,8 @@
                                     </dl>
                                 </div>
                                 <div class="news-grid__container">
-                                    <a href="#"><img src="image/thumbnail1.jpg" alt="80 by 80 size thumbnail" class="news__img news__img--bottom"></a>
+                                    <a href="#"><img src="image/thumbnail1.jpg" alt="80 by 80 size thumbnail"
+                                            class="news__thumbnail news__thumbnail--bottom"></a>
                                     <dl class="news-text news-text--bottom">
                                         <dt class="news__headline"><a href="#">다이어트에 좋은 여름 복숭아, 먹으면 안 되는 사람 있어</a></dt>
                                         <dd class="news__summary">
@@ -408,49 +417,61 @@
                     <!-- 웹툰 리스트 -->
                     <article class="list-article">
                         <h4 class="list-article__title">웹툰</h4>
-                        <div class="list-article__container">
-                            <div class="toonGrid">
-                                <div>
-                                    <img src="image/thumbnail2.jpg" alt="285 by 140 size thumbnail">
-                                    <dl>
-                                        <dt>하루 3컷</dt>
-                                        <dd>17화 편리하게 피곤하게</dd>
-                                    </dl>
+                        <div class="list-article__container webtoon">
+                            <div class="webtoon-grid">
+                                <div class="webtoon-grid__container">
+                                    <a href="#" class="webtoon-link"><img src="image/thumbnail2.jpg"
+                                            alt="285 by 140 size thumbnail" class="webtoon__thumbnail">
+                                        <dl>
+                                            <dt class="webtoon__title">하루 3컷</dt>
+                                            <dd class="webtoon__episode">17화 편리하게 피곤하게</dd>
+                                        </dl>
+                                    </a>
                                 </div>
-                                <div>
-                                    <img src="image/thumbnail2.jpg" alt="285 by 140 size thumbnail">
-                                    <dl>
-                                        <dt>유미의 세포들</dt>
-                                        <dd>326화 미래에서 온 텔레파시</dd>
-                                    </dl>
+                                <div class="webtoon-grid__container">
+                                    <a href="#" class="webtoon-link"><img src="image/thumbnail2.jpg"
+                                            alt="285 by 140 size thumbnail" class="webtoon__thumbnail">
+                                        <dl>
+                                            <dt class="webtoon__title webtoon__title--cut">유미의 세포들</dt>
+                                            <dd class="webtoon__episode">326화 미래에서 온 텔레파시</dd>
+                                        </dl>
+                                    </a>
                                 </div>
-                                <div>
-                                    <img src="image/thumbnail2.jpg" alt="285 by 140 size thumbnail">
-                                    <dl>
-                                        <dt>이말년씨리즈 2018</dt>
-                                        <dd>58화 공포의 떡볶이</dd>
-                                    </dl>
+                                <div class="webtoon-grid__container">
+                                    <a href="#" class="webtoon-link"><img src="image/thumbnail2.jpg"
+                                            alt="285 by 140 size thumbnail" class="webtoon__thumbnail">
+                                        <dl>
+                                            <dt class="webtoon__title">이말년씨리즈 2018</dt>
+                                            <dd class="webtoon__episode">58화 공포의 떡볶이</dd>
+                                        </dl>
+                                    </a>
                                 </div>
-                                <div>
-                                    <img src="image/thumbnail2.jpg" alt="285 by 140 size thumbnail">
-                                    <dl>
-                                        <dt>덴마</dt>
-                                        <dd>195화 1.다이크(195)</dd>
-                                    </dl>
+                                <div class="webtoon-grid__container">
+                                    <a href="#" class="webtoon-link"><img src="image/thumbnail2.jpg"
+                                            alt="285 by 140 size thumbnail" class="webtoon__thumbnail">
+                                        <dl>
+                                            <dt class="webtoon__title webtoon__title--smart">덴마</dt>
+                                            <dd class="webtoon__episode">195화 1.다이크(195)</dd>
+                                        </dl>
+                                    </a>
                                 </div>
-                                <div>
-                                    <img src="image/thumbnail2.jpg" alt="285 by 140 size thumbnail">
-                                    <dl>
-                                        <dt>1인용 기분</dt>
-                                        <dd>20화 평가</dd>
-                                    </dl>
+                                <div class="webtoon-grid__container">
+                                    <a href="#" class="webtoon-link"><img src="image/thumbnail2.jpg"
+                                            alt="285 by 140 size thumbnail" class="webtoon__thumbnail">
+                                        <dl>
+                                            <dt class="webtoon__title webtoon__title--cut">1인용 기분</dt>
+                                            <dd class="webtoon__episode">20화 평가</dd>
+                                        </dl>
+                                    </a>
                                 </div>
-                                <div>
-                                    <img src="image/thumbnail2.jpg" alt="285 by 140 size thumbnail">
-                                    <dl>
-                                        <dt>찬란하지 않아도 괜찮아</dt>
-                                        <dd>56화 숨길 수 없어요.</dd>
-                                    </dl>
+                                <div class="webtoon-grid__container">
+                                    <a href="#" class="webtoon-link"><img src="image/thumbnail2.jpg"
+                                            alt="285 by 140 size thumbnail" class="webtoon__thumbnail">
+                                        <dl>
+                                            <dt class="webtoon__title">찬란하지 않아도 괜찮아</dt>
+                                            <dd class="webtoon__episode">56화 숨길 수 없어요.</dd>
+                                        </dl>
+                                    </a>
                                 </div>
                             </div>
                         </div>
