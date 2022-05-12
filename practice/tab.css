@@ -1,0 +1,146 @@
+@charset "UTF-8";
+/* Reset css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+}
+
+textarea {
+    resize: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: '나눔고딕', NanumGothic, Dotum, '돋움', sans-serif;
+}
+
+.visually-hidden { 
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+    clip: rect(1px, 1px, 1px, 1px); /*maybe deprecated but we need to support legacy browsers */
+    clip-path: inset(50%); /*modern browsers, clip-path works inwards from each corner*/
+    white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+}
+
+/* Main Css */
+.tab-wrap {
+    width: 300px;
+    margin: 20px auto 0;
+}
+
+.tab::after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.tab__item {
+    float: left;
+}
+
+.tab__btn {
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+    color: #999;
+    background-color: transparent;
+    border: 1px solid #eee;
+    outline: 0;
+    cursor: pointer;
+}
+
+.tab__item + .tab__item .tab__btn {
+    border-left: 0;
+}
+
+.tab__item .tab__btn:hover,
+.tab__item.active .tab__btn {
+    font-weight: bold;
+    color: #000;
+    border-bottom: 0;
+}
+
+.panel-wrap {
+    display: none;
+    min-height: 350px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-top: 0;
+    box-sizing: border-box;
+}
+
+.panel-wrap.active {
+    display: block;
+}
+
+.panel {
+    list-style: auto;
+}
+
+.panel__item .panel__link {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    line-height: 30px;
+    color: #333;
+}
+
+.panel__item:hover .panel__link {
+    font-weight: bold;
+}
