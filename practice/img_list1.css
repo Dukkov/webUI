@@ -1,108 +1,53 @@
 @charset "UTF-8";
-/* Reset css */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend, input,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-}
-
-textarea {
-    resize: none;
+/* Reset Css */
+body {
+    font-family: '돋움', dotum, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 18px;
+    color: #3c3c3c;
 }
 
 a {
     color: inherit;
     text-decoration: none;
+    vertical-align: top;
 }
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, main, menu, nav, section {
-    display: block;
-}
-
-body {
-    line-height: 1;
-}
-
-ol, ul {
-    list-style: none;
-}
-
-blockquote, q {
-    quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-body {
-    font-family: '나눔고딕', NanumGothic, Dotum, '돋움', sans-serif;
-}
-
-.visually-hidden { 
-    border: 0;
-    padding: 0;
-    margin: 0;
-    position: absolute !important;
-    height: 1px; 
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
-    clip: rect(1px, 1px, 1px, 1px); /*maybe deprecated but we need to support legacy browsers */
-    clip-path: inset(50%); /*modern browsers, clip-path works inwards from each corner*/
-    white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+img {
+    vertical-align: top;
 }
 
 /* Main Css */
 .list-title {
     width: 1000px;
-    height: 50px;
     margin: 0 auto;
-    line-height: 50px;
-    font-size: 25px;
+    padding: 20px 0;
+    line-height: 38px;
+    font-size: 26px;
+    color: #000;
 }
 
-.list-wrap {
-    width: 100%;
-    padding: 20px 0;
+.main-wrap {
     background-color: #ececec;
 }
 
-.list-info {
+.main-wrap .content {
+    position: relative;
     width: 1000px;
-    height: 25px;
     margin: 0 auto;
-    text-align: right;
+    padding: 50px 0 20px;
+}
+
+.list-info {
+    position: absolute;
+    top: 20px;
+    right: 0;
     font-size: 12px;
     color: #7c7c7c;
 }
 
 .main-list {
     width: 1000px;
-    height: 215px;
     margin: 0 auto;
 }
 
@@ -113,38 +58,69 @@ body {
 }
 
 .main-list__item {
-    position: relative;
     float: left;
-    width: 322px;
-    height: 215px;
 }
 
 .main-list__item + .main-list__item {
     margin-left: 17px;
 }
 
-.main-list__item::after {
+.main-list__link {
+    position: relative;
+    display: block;
+}
+
+.main-list__img-box img {
+    width: 322px;
+    height: 215px;
+}
+
+.main-list__img-box {
+    position: relative;
+}
+
+.main-list__img-box::after {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(0, 0, 0, 0.05);
     content: '';
 }
 
-.sub-list {
-    width: 1000px;
-    height: 141px;
-    margin: 30px auto;
+.main-list .desc-wrap {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    color: #fff;
 }
 
-.sub-list__item {
-    position: relative;
-    float: left;
-    width: 188px;
-    height: 141px;
+.main-list__category {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.main-list__title {
+    margin-top: 3px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 18px;
+    line-height: 22px;
+}
+.sub-wrap {
+    margin-top: 30px;
+}
+
+.sub-list {
+    width: 1000px;
+    margin: 0 auto;
 }
 
 .sub-list::after {
@@ -153,11 +129,34 @@ body {
     content: '';
 }
 
+.sub-list__item {
+    float: left;
+    width: 188px;
+    margin-bottom: 40px;
+}
+
 .sub-list__item + .sub-list__item {
     margin-left: 15px;
 }
 
-.sub-list__item::after {
+.sub-list__item:nth-child(5n+1) {
+    margin-left: 0;
+}
+
+.sub-list__link {
+    display: block;
+}
+
+.sub-list__img-box img {
+    width: 188px;
+    height: 141px;
+}
+
+.sub-list__img-box {
+    position: relative;
+}
+
+.sub-list__img-box::after {
     position: absolute;
     top: 0;
     right: 0;
@@ -165,4 +164,33 @@ body {
     left: 0;
     border: 1px solid rgba(0, 0, 0, 0.03);
     content: '';
+}
+
+.sub-list .desc-wrap {
+    height: 79px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.sub-list__title {
+    display: -webkit-box;
+    max-height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    color: #090909;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.sub-list__category {
+    display: block;
+    overflow: hidden;
+    padding-top: 3px;
+    color: #7ba7df;
+    font-size: 12px;
+    line-height: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
