@@ -90,7 +90,7 @@ img {
     content: '';
 }
 
-.main-list .desc-wrap {
+.main-list .desc {
     position: absolute;
     right: 15px;
     bottom: 15px;
@@ -166,7 +166,7 @@ img {
     content: '';
 }
 
-.sub-list .desc-wrap {
+.sub-list .desc {
     height: 79px;
     margin-top: 10px;
     padding: 5px;
